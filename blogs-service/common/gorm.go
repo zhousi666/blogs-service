@@ -3,7 +3,6 @@ package common
 import (
 	"database/sql"
 	"github.com/jinzhu/gorm"
-	"time"
 )
 
 // DB gorm数据库实例

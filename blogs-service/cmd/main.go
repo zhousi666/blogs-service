@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"os"
 	"os/signal"
 	"strconv"
@@ -35,7 +34,7 @@ func main() {
 
 	//init config
 	config.Server = "blogs-service"
-	conf := common.Initconfig()
+	conf := config.InitConfig()
 
 	e := echo.New()
 	//echo init ,include log init
@@ -51,7 +50,7 @@ func main() {
 	e.Use(common.Recover())
 
 	//InitDB
-	common.InitDB(conf.Db.MysqlUrl, conf.Db.MysqlIdle, conf.Db.MysqlMaxOpen, conf.Debug)
+	common.InitDB(conf.Db.Mysqlurl, conf.Db.Mysqlidle, conf.Db.Mysqlmaxopen, conf.Debug)
 	defer common.DBClose()
 	blogs.DbMigrate()
 

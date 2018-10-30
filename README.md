@@ -1,4 +1,4 @@
-#blogs-service
+## blogs-service
 
 ### What is the blogs service
     blogs-service is the server of blogs，which stores and processes user data for the client. Developed using golang, based on docker deployment.

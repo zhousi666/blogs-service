@@ -14,6 +14,5 @@ export GOLANG_VERSION=golang:1.10.4
 export TAG=0.0.1
 
 build:
-	sudo docker run --rm -v $(PROJECT_SOURCE_DIR):$(PROJECT_SOURCE_DIR_DOCKER) $(GOLANG_VERSION)					\
-						 -v $(PROJECT_BUILD_PATH):$(PROJECT_BUILD_PATH_DOCKER)										\
+	sudo docker run --rm -v $(PROJECT_SOURCE_DIR):$(PROJECT_SOURCE_DIR_DOCKER) -v $(PROJECT_BUILD_PATH):$(PROJECT_BUILD_PATH_DOCKER) $(GOLANG_VERSION)	\
 		 go build -ldflags "-X main.Version=$(TAG)" -o $(PROJECT_BUILD_PATH_DOCKER)/$(PROJECT_NAME) $(BUILD_PATH)

@@ -1,0 +1,16 @@
+# This is the blogs server config
+
+#port为服务在容器中端口，修改是都还要修改docker-compose.yml中挂载的端口，才会生效
+port = 8080
+#debug=true会产生很多调试日志，所以默认不开启
+debug = true
+#服务再容器中的日志目录
+logpath= "/go/src/log"
+
+[db]
+# username="root",  password="123456", host="127.0.0.1:3306", database="blogs"
+mysqlurl="root:123456@tcp(127.0.0.1:3306)/blogs?charset=utf8mb4&parseTime=True&loc=Local"
+# database idel connection numbers
+mysqlidle=10
+# database max-open
+mysqlmaxopen=100

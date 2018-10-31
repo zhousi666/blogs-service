@@ -3,6 +3,9 @@ package common
 import (
 	"database/sql"
 	"github.com/jinzhu/gorm"
+
+	// 引入数据库驱动注册及初始化,不添加会报错
+	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
 
 // DB gorm数据库实例

@@ -5,10 +5,10 @@ services:
         image: golang:1.10.4
         restart: always
         working_dir: /go/src
-        command: ./blogs-service
+        command: ./blogs
         ports:
             - "8080:8080"
         volumes:
-            - ./blogs-service/build/blogs-service:/go/src/blogs-service:ro
             - ./blogs-service/config/config.toml:/go/src/config.toml:ro
+            - ./build/blogs:/go/src/blogs:ro
             - ./log:/go/src/log

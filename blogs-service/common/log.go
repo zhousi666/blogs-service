@@ -36,7 +36,7 @@ func UpLogFile() {
 
 func setLogFile() {
 	strtime := time.Now().Format("2006-01-02") //时间模板 2006-01-02.15.04.05  目前按照天来记日志
-	filename := logPath + strtime + ".log"
+	filename := logPath + "." + strtime + ".log"
 	filetemp := stdFile
 	var err error
 	stdFile, err = os.OpenFile(filename, syscall.O_CREAT|syscall.O_APPEND|syscall.O_RDWR, 0666) //打开文件

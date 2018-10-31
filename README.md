@@ -1,20 +1,30 @@
 ## blogs-service
 
+
 ### What is the blogs service
-    blogs-service is the server of blogs，which stores and processes user data for the client. Developed using golang, based on docker deployment.
+
+
+    blogs-service is the server of blogs，which stores and processes user data for the client.
+    Developed using golang, based on docker deployment.
+
 
 ### Dependencies
+
 
 - install docker
 
 - install docker-compose
 
-- mysql ( You can see the config of db in ``blogs-service/src/config/config.tol`` ).
+- mysql ( You can see the config of db in ``blogs-service/config/config.tol`` ).
+
 
 ### Config 
- The config of server is made up of  ``blogs-service/src/config/config.tol`` and ``blogs-service/docker-compose.yml``.
+
+ The config of server is made up of  ``blogs-service/config/config.tol`` and ``docker-compose.yml``.
+
 
 ### Installation
+
 
 ```
 

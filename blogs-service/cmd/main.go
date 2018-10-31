@@ -33,7 +33,7 @@ func main() {
 	kingpin.MustParse(app.Parse(os.Args[1:]))
 
 	//init config
-	config.Server = "blogs-service"
+	config.Server = "blogs"
 	conf := config.InitConfig()
 
 	e := echo.New()

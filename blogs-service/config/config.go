@@ -22,7 +22,7 @@ func InitConfig() *configStruct {
 		panic(err)
 	}
 
-	config.Logpath = config.Logpath + "/" + Server + "_server."
+	config.Logpath = config.Logpath + "/" + Server
 	Config = config
 	return config
 }
